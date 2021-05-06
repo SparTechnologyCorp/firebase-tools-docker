@@ -36,4 +36,4 @@ RUN apk --no-cache add openjdk11-jre bash && \
 USER node
 VOLUME $HOME/.cache
 WORKDIR $HOME
-CMD ["sh"]
+CMD firebase emulators:start --debug --only auth --token $FIREBASE_TOKEN
